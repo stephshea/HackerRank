@@ -1,3 +1,20 @@
+//transformed for loop to forEach
+
+function birthdayCakeCandles(ar) {
+	ar = ar.sort(function(a, b) {
+		return b - a;
+	});
+	var count = 0;
+	ar.forEach(function(candle, index) {
+		var max = ar[0];
+		if (ar[index] === max) {
+			count++;
+		}
+	});
+	return count;
+}
+
+//full algorithm
 'use strict';
 
 const fs = require('fs');
