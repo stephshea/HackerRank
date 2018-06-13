@@ -1,4 +1,21 @@
 //transformed for loop to forEach
+let count = 0;
+let tallest = 0;
+function birthdayCakeCandles(ar) {
+    ar.forEach(function(candle) 
+    {
+    if(candle > tallest)
+		{
+            tallest = candle;
+            count = 0;
+        }
+    if(candle === tallest)
+        {
+            count++
+        }
+    });
+      return count;
+}
 
 function birthdayCakeCandles(ar) {
 	ar = ar.sort(function(a, b) {
